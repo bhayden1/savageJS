@@ -1,0 +1,26 @@
+<div class="table-responsive" ng-controller="DamageCtrl">
+    <label>                            
+        Damage
+        <input ng-model="damage" ng-change="calc()" placeholder="Enter damage"/>
+    </label>
+    <label>                            
+        AP
+        <input ng-model="ap" ng-change="calc()" placeholder="Enter AP"/>
+    </label>
+    <table  class="table table-striped table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Toughness</th>
+            <th>Armor</th>
+            <th>Damage Overflow</th>
+            <th>Wounds</th>
+        </tr>
+        <tr ng-repeat="char in characters">
+            <td>{{char.name}}</td>
+            <td>{{char.toughness}}</td>
+            <td>{{char.armor}}</td>
+            <td>{{char.damageOverflow}}</td>
+            <td>{{char.wounds}}</td>
+        </tr>
+    </table>
+</div>

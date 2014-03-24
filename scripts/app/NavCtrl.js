@@ -1,7 +1,6 @@
-var savageApp = angular.module('savageApp', []);
-
 savageApp.controller('NavCtrl', function ($scope) {
     $scope.links = [
-        { name: 'Damage', href: 'Damage' }
+        { name: 'Damage', href: 'damage' },
+        { name: 'Characters', href: 'characters' }
     ]
 });
