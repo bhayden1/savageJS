@@ -13,7 +13,7 @@ savageApp.controller('DamageCtrl', function ($scope) {
             armor = character.armor - $scope.ap;
             armr = armor < 0 ? 0 : armor;
             toughness = character.toughness + armor;
-            damage = $scope.damage - toughness;
+            damage = ($scope.damage || 0) - toughness;
 
             character.damageOverflow = damage;
             character.wounds = character.damageOverflow / 4;
